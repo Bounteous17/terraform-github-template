@@ -67,6 +67,12 @@ variable "github_repository" {
 
 # github_branch_protection_defaults
 
+variable "github_branch_protection_count" {
+  description = "Disable branch protection for default one"
+  default     = 1
+  type        = number
+}
+
 variable "github_branch_protection_defaults" {
   type = object({
     enforce_admins                  = bool,
@@ -173,4 +179,11 @@ variable "github_repository_topics" {
   type = list(string)
 
   default = []
+}
+
+# github_branch_default
+
+variable "github_branch_default" {
+  type    = string
+  default = "master"
 }

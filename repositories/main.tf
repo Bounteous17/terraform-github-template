@@ -11,6 +11,8 @@ module "terraform-github-template" {
     team_id    = "team-infra"
     permission = "admin"
   }]
-  
+
+  github_branch_protection_count = 0
+
   github_repository_topics = ["terraform", "github", "template"]
 }
