@@ -1,4 +1,4 @@
-resource "github_branch" "master" {
+resource "github_branch" "default" {
   depends_on = [github_repository.repo]
 
   repository = github_repository.repo.name
