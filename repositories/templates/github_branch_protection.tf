@@ -13,10 +13,10 @@ locals {
 
 resource "github_branch_protection" "main" {
   count         = var.github_branch_protection_count
-  depends_on    = [github_branch_default.default]
+  depends_on    = [github_repository.repo]
   repository_id = github_repository.repo.node_id
 
-  pattern                         = github_branch_default.default.branch
+  pattern                         = var.github_branch_default
   enforce_admins                  = local.github_branch_protection.enforce_admins
   allows_deletions                = local.github_branch_protection.allows_deletions
   allows_force_pushes             = local.github_branch_protection.allows_force_pushes

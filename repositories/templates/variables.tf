@@ -185,5 +185,5 @@ variable "github_repository_topics" {
 
 variable "github_branch_default" {
   type    = string
-  default = "master"
+  default = "main"
 }
